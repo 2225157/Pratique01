@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221124 01:38:20.109" rpa="false" schemaversion="3">
+<suite id="s1" name="TP" source="c:\Users\Issam\Desktop\Robotframework project\TP Automatisation_2\TestCases\TP.robot">
+<test id="s1-t1" name="TP" line="5">
+<kw name="Ouvrire application" library="keywords LogIn test">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 01:38:20.308" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<status status="PASS" starttime="20221124 01:38:20.308" endtime="20221124 01:38:22.344"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221124 01:38:22.344" endtime="20221124 01:38:22.459"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:24.463" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:22.460" endtime="20221124 01:38:24.463"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:20.307" endtime="20221124 01:38:24.463"/>
+</kw>
+<kw name="Positive LogIn test" library="keywords LogIn test">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${var_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:24.476" level="INFO">Typing text 'student' into text field '//input[@name='username']'.</msg>
+<status status="PASS" starttime="20221124 01:38:24.464" endtime="20221124 01:38:24.526"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${var_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:24.526" level="INFO">Typing text 'Password123' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20221124 01:38:24.526" endtime="20221124 01:38:24.581"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:26.594" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:24.582" endtime="20221124 01:38:26.594"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:26.594" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20221124 01:38:26.594" endtime="20221124 01:38:27.726"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20221124 01:38:27.729" level="INFO">${url} = https://practicetestautomation.com/logged-in-successfully/</msg>
+<status status="PASS" starttime="20221124 01:38:27.726" endtime="20221124 01:38:27.730"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221124 01:38:27.730" endtime="20221124 01:38:27.730"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:29.740" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:27.730" endtime="20221124 01:38:29.740"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>practicetestautomation.com/logged-in-successfully/</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221124 01:38:29.753" level="INFO">Current page contains text 'practicetestautomation.com/logged-in-successfully/'.</msg>
+<status status="PASS" starttime="20221124 01:38:29.741" endtime="20221124 01:38:29.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:31.764" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:29.753" endtime="20221124 01:38:31.764"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${expected_text}</var>
+<arg>//strong[contains(text(),'Congratulations student. You successfully logged i')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:31.797" level="INFO">${expected_text} = Congratulations student. You successfully logged in!</msg>
+<status status="PASS" starttime="20221124 01:38:31.764" endtime="20221124 01:38:31.797"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${expected_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221124 01:38:31.797" endtime="20221124 01:38:31.798"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Congratulations</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221124 01:38:31.800" level="INFO">Current page contains text 'Congratulations'.</msg>
+<status status="PASS" starttime="20221124 01:38:31.798" endtime="20221124 01:38:31.800"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:33.811" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:31.800" endtime="20221124 01:38:33.811"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20221124 01:38:33.827" level="INFO">Current page contains link '//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']'.</msg>
+<status status="PASS" starttime="20221124 01:38:33.811" endtime="20221124 01:38:33.827"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${button}</var>
+<arg>//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:33.843" level="INFO">${button} = Log out</msg>
+<status status="PASS" starttime="20221124 01:38:33.827" endtime="20221124 01:38:33.843"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${button}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221124 01:38:33.843" endtime="20221124 01:38:33.843"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221124 01:38:33.843" endtime="20221124 01:38:35.964"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:24.464" endtime="20221124 01:38:35.965"/>
+</kw>
+<kw name="Negative username test" library="keywords LogIn test">
+<kw name="Ouvrire application" library="keywords LogIn test">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 01:38:35.969" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<status status="PASS" starttime="20221124 01:38:35.969" endtime="20221124 01:38:37.925"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221124 01:38:37.925" endtime="20221124 01:38:38.035"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:40.042" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:38.035" endtime="20221124 01:38:40.042"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:35.967" endtime="20221124 01:38:40.042"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${var_username_érroné}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:40.043" level="INFO">Typing text 'incorrectUser' into text field '//input[@name='username']'.</msg>
+<status status="PASS" starttime="20221124 01:38:40.042" endtime="20221124 01:38:40.111"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${var_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:40.112" level="INFO">Typing text 'Password123' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20221124 01:38:40.112" endtime="20221124 01:38:40.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:42.181" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:40.169" endtime="20221124 01:38:42.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:42.183" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20221124 01:38:42.182" endtime="20221124 01:38:42.217"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your password is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221124 01:38:42.229" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<status status="PASS" starttime="20221124 01:38:42.217" endtime="20221124 01:38:42.229"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221124 01:38:42.230" endtime="20221124 01:38:44.352"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:35.966" endtime="20221124 01:38:44.352"/>
+</kw>
+<kw name="Negative password test" library="keywords LogIn test">
+<kw name="Ouvrire application" library="keywords LogIn test">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 01:38:44.354" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<status status="PASS" starttime="20221124 01:38:44.354" endtime="20221124 01:38:46.293"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221124 01:38:46.293" endtime="20221124 01:38:46.409"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:48.415" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:46.409" endtime="20221124 01:38:48.415"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:44.353" endtime="20221124 01:38:48.415"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${var_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:48.416" level="INFO">Typing text 'student' into text field '//input[@name='username']'.</msg>
+<status status="PASS" starttime="20221124 01:38:48.415" endtime="20221124 01:38:48.468"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${var_password_érroné}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:48.469" level="INFO">Typing text 'incorrectPassword' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20221124 01:38:48.468" endtime="20221124 01:38:48.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 01:38:50.536" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 01:38:48.527" endtime="20221124 01:38:50.536"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 01:38:50.537" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20221124 01:38:50.536" endtime="20221124 01:38:50.571"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your password is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221124 01:38:50.580" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<status status="PASS" starttime="20221124 01:38:50.571" endtime="20221124 01:38:50.581"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221124 01:38:50.581" endtime="20221124 01:38:52.693"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:44.353" endtime="20221124 01:38:52.694"/>
+</kw>
+<status status="PASS" starttime="20221124 01:38:20.306" endtime="20221124 01:38:52.695"/>
+</test>
+<status status="PASS" starttime="20221124 01:38:20.113" endtime="20221124 01:38:52.699"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TP">TP</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
