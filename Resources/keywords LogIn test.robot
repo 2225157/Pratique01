@@ -52,7 +52,7 @@ Negative username test
     Sleep    2
     # Cliquer sur le bouton Submit
     Click Element    ${btn_login}
-    Page Should Contain    Your password is invalid!
+    Page Should Contain    Your username is invalid!
     Close All Browsers
 
 Negative password test
